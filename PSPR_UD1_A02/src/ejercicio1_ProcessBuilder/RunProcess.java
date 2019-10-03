@@ -41,11 +41,11 @@ public class RunProcess {
  * a) Para poder ejecutar el programa con el argumento "calc.exe", lo que
  * tenemos que hacer, es necesario añadirlo a nuestra clase para que al ejecutar
  * el programa se pueda cargar dicho argumento. Para ello tenemos que acceder al
- * run configurations y desde ahí incluir el argmento.
+ * run configurations y desde ahí incluir el argumento.
  */
 
 /*
- * b) Si ejecutamos el programa sin incluir un arguento, en la consola se
+ * b) Si ejecutamos el programa sin incluir un argumento, en la consola se
  * muestra el mensaje de error "Se necesita un programa para ejecutar". Esto es
  * debido a que al no incluir ningun argumento, no se encunetra ningún programa
  * a ejecutar.
