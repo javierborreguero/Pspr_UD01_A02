@@ -12,7 +12,7 @@ public class ComunicationBetweenProcess {
         try { // tratamiento de excepciones
             Process process = new ProcessBuilder(args).start();
             InputStream is = process.getInputStream();
-            InputStreamReader isr = new InputStreamReader(is, "UTF-8"); // incluir el parámetro UTF-8
+            InputStreamReader isr = new InputStreamReader(is, "cp850"); // incluir el parámetro UTF-8
             BufferedReader br = new BufferedReader(isr);
             String line;
             System.out.println("Salida del proceso " + Arrays.toString(args) + ":");
@@ -30,10 +30,13 @@ public class ComunicationBetweenProcess {
 }
 
 /* A] Al ejecutar el programa indicando como argumento "cmd.exe", la información del hijo es enviada al padre siendo esta escrita
-por pantalla. Por lo tanto en consola aparece " Salida del proceso [cmd.exe] "
+por pantalla. Por lo tanto en consola aparece " Salida del proceso [cmd.exe]. "
 
    B] Antes de incluir el parámetro dentro del método, "Versión" aparecía con un caracter extraño al no entender que contenía una tilde.
 Al añadir UTF-8 la salida por consola cambia a " ? " en la letra acentuada.
 
-   C] */
+>> Si se pasa por parámetro cp850 en vez de UTF-8 sí que entendería que la o tiene una tilde <<
+
+   C] Una vez añadido el try catch del tratamiento de excepciones y cerrado el hijo, el programa se inicia abriendo el cmd pero cerrándose al instante.
+   */
 
